@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Venkyluuu!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* ================= BODY ================= */
+body{
+  min-height:100vh;
+  font-family:'Inter', sans-serif;
+  color:#ffffff;
+
+  background:
+    radial-gradient(900px 500px at 85% 15%, rgba(255,120,90,0.45), transparent 60%),
+    radial-gradient(800px 600px at 10% 90%, rgba(80,60,140,0.55), transparent 65%),
+    linear-gradient(120deg,
+      #14071f 0%,
+      #1f0b2f 35%,
+      #2a1240 65%,
+      #14071f 100%);
+}
+
+/* Grain texture (does NOT block clicks) */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='5'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ================= FADE-IN ON SCROLL ================= */
+.fade-section{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .9s ease, transform .9s ease;
+}
+.fade-section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= HERO ================= */
+.hero{
+  max-width:1100px;
+  margin:0 auto;
+  padding:120px 32px 36px;
+  position:relative;
+  z-index:1;
+}
+
+.hero h1{
+  font-size:4rem;
+  font-weight:600;
+  line-height:1.05;
+  letter-spacing:-0.02em;
+}
+
+.hero h2{
+  font-size:1.25rem;
+  font-weight:400;
+  opacity:0.85;
+  margin-top:16px;
+  max-width:680px;
+}
+
+/* Handwritten love line */
+.love-line{
+  margin-top:28px;
+  font-family:'Allura', cursive;
+  font-size:2.4rem;
+  line-height:1.2;
+  opacity:0.95;
+}
+
+/* ================= GALLERY SECTION ================= */
+.gallery-section{
+  max-width:1100px;
+  margin:40px auto 0;
+  padding:0 32px;
+  position:relative;
+  z-index:1;
+}
+
+.gallery-title{
+  font-size:1.4rem;
+  font-weight:500;
+  margin-bottom:18px;
+}
+
+/* Grid */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+/* ================= PHOTO CARD ================= */
+.photo{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+}
+
+/* Image */
+.photo img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:transform .4s ease;
+}
+
+.photo:hover img{
+  transform:scale(1.05);
+}
+
+/* ================= OVERLAY TEXT (FIXED) ================= */
+.overlay{
+  position:absolute;
+  inset:0;
+  z-index:2; /* 🔥 critical */
+  display:flex;
+  align-items:flex-end;
+  padding:18px;
+  background:linear-gradient(to top, rgba(0,0,0,0.65), transparent 60%);
+  opacity:0;
+  transition:opacity .4s ease;
+}
+
+.photo:hover .overlay{
+  opacity:1;
+}
+
+.overlay p{
+  font-size:0.95rem;
+  line-height:1.35;
+  font-weight:400;
+}
+
+/* Mobile: always visible (no hover) */
+@media (hover:none){
+  .overlay{
+    opacity:1;
+  }
+}
+
+/* ================= BUTTON ================= */
+button{
+  margin-top:24px;
+  background:rgba(255,255,255,0.9);
+  color:#1f0b2f;
+  font-weight:600;
+  padding:14px 34px;
+  border:none;
+  border-radius:28px;
+  cursor:pointer;
+}
+
+/* ================= SURPRISE ================= */
+.surprise{
+  max-width:900px;
+  margin:24px auto 80px;
+  padding:0 32px;
+  position:relative;
+  z-index:1;
+}
+
+.card{
+  background:rgba(255,255,255,0.12);
+  border-radius:20px;
+  padding:28px;
+  backdrop-filter:blur(10px);
+}
+
+.hidden{
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero fade-section">
+  <h1>Happy Birthday<br>Venkyluuu!</h1>
+  <h2>Geethu bangaram loves you the most!</h2>
+
+  <div class="love-line">
+    Finding you was like coming home.
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-section fade-section">
+  <div class="gallery-title">Our moments 🤍</div>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="photos/pic1.jpg" alt="">
+      <div class="overlay">
+        <p>
+          I don’t just mean I love you more than you love me.  
+          I mean I love you more than the bad days ahead of us  
+          and any fight we will ever have.
+        </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="photos/pic2.jpg" alt="">
+      <div class="overlay">
+        <p>
+          I don’t just mean I love you more than you love me.  
+          I mean I love you more than the distance between us.
+        </p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img src="photos/pic3.jpg" alt="">
+      <div class="overlay">
+        <p>
+          I don’t just mean I love you more than you love me.  
+          I mean I love you more than any obstacle that could  
+          ever try and come between us.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button id="surpriseBtn">Tap for the surprise</button>
+</div>
+
+<!-- SURPRISE -->
+<div class="surprise fade-section">
+  <div id="secret" class="card hidden">
+    <p>
+      You’re kind of my favourite distraction.  
+      My day just gets better thinking about you.  
+      I didn’t believe in “the one", until I met you. Haha, You think THIS is the surprise?
+    </p>
+  </div>
+</div>
+
+<script>
+/* Fade-in on scroll */
+const sections = document.querySelectorAll(".fade-section");
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.2});
+sections.forEach(s=>observer.observe(s));
+
+/* Surprise toggle */
+document.getElementById("surpriseBtn").addEventListener("click",()=>{
+  document.getElementById("secret").classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>
