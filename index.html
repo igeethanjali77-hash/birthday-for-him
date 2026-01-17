@@ -275,7 +275,26 @@ document.getElementById("surpriseBtn").addEventListener("click",()=>{
   document.getElementById("secret").classList.toggle("hidden");
 });
 </script>
+<button onclick="document.getElementById('bgm').play()"
+        style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        border: 1px solid white;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 9999;">
+  ▶ Play our song ❤️
+</button>
+
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
+
 
